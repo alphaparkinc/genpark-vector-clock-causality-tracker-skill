@@ -1,15 +1,14 @@
 {
   "name": "genpark-vector-clock-causality-tracker-skill",
   "version": "1.0.0",
-  "description": "Vector clock and Lamport logical timestamp engine for causal tracking and concurrency detection.",
-  "author": "GenPark AI",
-  "license": "Apache-2.0",
-  "dependencies": [],
-  "keywords": [
-    "vector-clock",
-    "causality-tracking",
-    "lamport-timestamp",
-    "concurrency",
-    "distributed-systems"
+  "description": "Vector clock causality tracker capturing Lamport partial ordering and detecting concurrent conflicting mutations.",
+  "topics": [
+    "genpark-skill",
+    "agentic-ai",
+    "vector-clocks",
+    "causality",
+    "distributed-consensus",
+    "partial-ordering",
+    "eventual-consistency"
   ]
 }
