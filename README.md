@@ -1,24 +1,25 @@
-# GenPark Vector Clock Causality Tracker Skill
+# genpark-vector-clock-causality-tracker-skill
 
-Vector clock and partial-order causal event tracking engine for distributed autonomous agents.
+[![GenPark Skill](https://img.shields.io/badge/GenPark-Skill-blue.svg)](https://github.com/alphaparkinc/genpark-vector-clock-causality-tracker-skill)
+[![Agentic AI](https://img.shields.io/badge/Agentic-AI-orange.svg)](https://github.com/alphaparkinc/genpark-vector-clock-causality-tracker-skill)
+[![Zero Pip Dependencies](https://img.shields.io/badge/Dependencies-Standard_Library-green.svg)](https://github.com/alphaparkinc/genpark-vector-clock-causality-tracker-skill)
 
-Explore more agentic technologies at [GenPark](https://genpark.ai) and the [GenPark MCP Catalog](https://genpark.ai/mcp).
+Vector clock causality tracker capturing Lamport partial ordering and detecting concurrent conflicting mutations.
 
+## Architecture
 ```mermaid
-sequenceDiagram
-    participant A as Agent A
-    participant B as Agent B
-
-    Note over A: Event A1 (A:1)
-    Note over B: Event B1 (B:1)
-    Note over A,B: A1 and B1 are CONCURRENT (||)
-
-    A->>B: Msg with Clock (A:2)
-    Note over B: Recv: max(B, A) + 1 -> (A:2, B:2)
-    Note over A,B: A2 HAPPENED_BEFORE B2 (->)
+graph TD
+    A[Distributed Client / Coordinator] --> B[genpark-vector-clock-causality-tracker-skill]
+    B --> C[Partition / Replication State Engine]
+    C --> D[Converged Consistent Store]
 ```
 
 ## Features
-- Complete vector clock causality engine with partial order detection (`->`, `||`, `==`).
-- Zero external dependencies.
-- Handles arbitrary number of asynchronous agents.
+- Pure Python standard library implementation with zero third-party dependencies.
+- Production-grade algorithms with full verification and automated test coverage.
+- Standalone client, MCP protocol server, and execution examples.
+
+## Quickstart
+```bash
+python example_usage.py
+```
